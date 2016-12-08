@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ECDE161F-3685-4208-9D8A-DB3F4D04F3DC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>stitcher</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>E:\workspaces\stitcher\src\third-party\jpeg;E:\workspaces\stitcher\src\third-party\eigen;E:\workspaces\stitcher\src;E:\workspaces\stitcher\src\third-party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>E:\workspaces\stitcher\src\third-party\jpeg;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libjpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\feature\brief.h" />
+    <ClInclude Include="..\feature\dist.h" />
+    <ClInclude Include="..\feature\dog.h" />
+    <ClInclude Include="..\feature\extrema.h" />
+    <ClInclude Include="..\feature\feature.h" />
+    <ClInclude Include="..\feature\gaussian.h" />
+    <ClInclude Include="..\feature\matcher.h" />
+    <ClInclude Include="..\feature\orientation.h" />
+    <ClInclude Include="..\feature\sift.h" />
+    <ClInclude Include="..\lib\color.h" />
+    <ClInclude Include="..\lib\config.h" />
+    <ClInclude Include="..\lib\geometry.h" />
+    <ClInclude Include="..\lib\imgproc.h" />
+    <ClInclude Include="..\lib\kdtree.h" />
+    <ClInclude Include="..\lib\mat.h" />
+    <ClInclude Include="..\lib\matrix.h" />
+    <ClInclude Include="..\lib\planedrawer.h" />
+    <ClInclude Include="..\lib\polygon.h" />
+    <ClInclude Include="..\lib\timer.h" />
+    <ClInclude Include="..\lib\utils.h" />
+    <ClInclude Include="..\src\lib\debugutils.h" />
+    <ClInclude Include="..\stitch\blender.h" />
+    <ClInclude Include="..\stitch\camera.h" />
+    <ClInclude Include="..\stitch\camera_estimator.h" />
+    <ClInclude Include="..\stitch\cylstitcher.h" />
+    <ClInclude Include="..\stitch\homography.h" />
+    <ClInclude Include="..\stitch\imageref.h" />
+    <ClInclude Include="..\stitch\incremental_bundle_adjuster.h" />
+    <ClInclude Include="..\stitch\match_info.h" />
+    <ClInclude Include="..\stitch\multiband.h" />
+    <ClInclude Include="..\stitch\projection.h" />
+    <ClInclude Include="..\stitch\stitcher.h" />
+    <ClInclude Include="..\stitch\stitcherbase.h" />
+    <ClInclude Include="..\stitch\stitcher_image.h" />
+    <ClInclude Include="..\stitch\transform_estimate.h" />
+    <ClInclude Include="..\stitch\warp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\main.cc" />
+    <ClCompile Include="..\src\feature\brief.cpp" />
+    <ClCompile Include="..\src\feature\dist.cpp" />
+    <ClCompile Include="..\src\feature\dog.cpp" />
+    <ClCompile Include="..\src\feature\extrema.cpp" />
+    <ClCompile Include="..\src\feature\feature.cpp" />
+    <ClCompile Include="..\src\feature\gaussian.cpp" />
+    <ClCompile Include="..\src\feature\matcher.cpp" />
+    <ClCompile Include="..\src\feature\orientation.cpp" />
+    <ClCompile Include="..\src\feature\sift.cpp" />
+    <ClCompile Include="..\src\lib\color.cpp" />
+    <ClCompile Include="..\src\lib\config.cpp" />
+    <ClCompile Include="..\src\lib\debugutils.cpp" />
+    <ClCompile Include="..\src\lib\imgio.cpp" />
+    <ClCompile Include="..\src\lib\imgproc.cpp" />
+    <ClCompile Include="..\src\lib\kdtree.cpp" />
+    <ClCompile Include="..\src\lib\matrix.cpp" />
+    <ClCompile Include="..\src\lib\planedrawer.cpp" />
+    <ClCompile Include="..\src\lib\polygon.cpp" />
+    <ClCompile Include="..\src\lib\timer.cpp" />
+    <ClCompile Include="..\src\lib\utils.cpp" />
+    <ClCompile Include="..\src\stitch\blender.cpp" />
+    <ClCompile Include="..\src\stitch\camera.cpp" />
+    <ClCompile Include="..\src\stitch\camera_estimator.cpp" />
+    <ClCompile Include="..\src\stitch\cylstitcher.cpp" />
+    <ClCompile Include="..\src\stitch\debug.cpp" />
+    <ClCompile Include="..\src\stitch\homography.cpp" />
+    <ClCompile Include="..\src\stitch\incremental_bundle_adjuster.cpp" />
+    <ClCompile Include="..\src\stitch\multiband.cpp" />
+    <ClCompile Include="..\src\stitch\stitcher.cpp" />
+    <ClCompile Include="..\src\stitch\stitcherbase.cpp" />
+    <ClCompile Include="..\src\stitch\stitcher_image.cpp" />
+    <ClCompile Include="..\src\stitch\transform_estimate.cpp" />
+    <ClCompile Include="..\src\stitch\warp.cpp" />
+    <ClCompile Include="..\src\third-party\lodepng\lodepng.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Debug\config.cfg" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
