@@ -5,13 +5,14 @@
 #include "config.h"
 #include "debugutils.h"
 #include "utils.h"
+#include <iostream>
 using namespace std;
 
 namespace config {
 
 // TODO allow different types for a value. using template
 ConfigParser::ConfigParser(const char* fname) {
-	if (! exists_file(fname))
+	if (!exists_file)
 		error_exit("Cannot find config file!");
 	const static size_t BUFSIZE = 4096;		// TODO overflow
 	ifstream fin(fname);

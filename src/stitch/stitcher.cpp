@@ -42,7 +42,7 @@ Mat32f Stitcher::build() {
 	free_feature();
 	//load_matchinfo(MATCHINFO_DUMP);
 	if (DEBUG_OUT) {
-		draw_matchinfo();
+		draw_matchinfo();         
 		dump_matchinfo(MATCHINFO_DUMP);
 	}
 	assign_center();

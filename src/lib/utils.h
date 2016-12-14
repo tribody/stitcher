@@ -8,6 +8,7 @@
 #include <cstdarg>
 #include <cstdlib>
 #include <string>
+#include <fstream>
 #include <cstring>
 #include <sstream>
 #include <memory>
@@ -80,8 +81,11 @@ std::shared_ptr<T> create_auto_buf(size_t len, bool init_zero = false) {
 
 
 inline bool exists_file(const char* name) {
-	struct stat buffer;
-	return stat(name, &buffer) == 0;
+	std::ifstream fin(name);
+	if (!fin)
+		return false;
+	else
+		return true;
 }
 
 inline bool endswith(const char* str, const char* suffix) {

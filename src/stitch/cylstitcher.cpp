@@ -11,6 +11,7 @@
 #include "blender.h"
 #include "match_info.h"
 #include "warp.h"
+#define PLG_IN
 
 using namespace config;
 using namespace std;
@@ -40,7 +41,10 @@ void CylinderStitcher::build_warp() {;
 #pragma omp parallel for schedule(dynamic)
 	REP(k, n - 1)
 		matches[k] = pwmatcher.match(k, (k + 1) % n);
+#ifndef PLG_IN
 	print_debug("match time: %lf secs\n", timer.duration());
+#endif // !PLG_IN
+
 
 	vector<Homography> bestmat;
 

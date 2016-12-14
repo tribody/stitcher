@@ -325,8 +325,10 @@ void planet(const char* fname) {
 
 int main(int argc, char* argv[]) {
 	for (int j = 0; j < argc; j++) {
-		printf("argv[%d] = %s\n", j, argv[j]);
+		//printf("argv[%d] = %s\n", j, argv[j]);
+		cout << "argv[" << j << "]" << argv[j] << endl;
 	}
+	
 	//print_debug("获取参数列表：%s\n",argv);
 	if (argc <= 2)
 		error_exit("Need at least two images to stitch.\n");
@@ -351,4 +353,5 @@ int main(int argc, char* argv[]) {
 	else
 		// the real routine
 		work(argc, argv);
+	system("PAUSE");
 }

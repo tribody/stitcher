@@ -194,7 +194,7 @@
     <ClInclude Include="..\stitch\warp.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\main.cc" />
+    <ClCompile Include="..\main.cpp" />
     <ClCompile Include="..\src\feature\brief.cpp" />
     <ClCompile Include="..\src\feature\dist.cpp" />
     <ClCompile Include="..\src\feature\dog.cpp" />
