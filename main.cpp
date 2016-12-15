@@ -22,6 +22,7 @@
 #include "stitch/warp.h"
 #include <ctime>
 #include <cassert>
+#include <Windows.h>
 
 using namespace std;
 using namespace pano;
@@ -242,7 +243,7 @@ void init_config() {
 	else if (TRANS)
 		print_debug("Run with translation mode.\n");
 	else if (ESTIMATE_CAMERA)
-		print_debug("Run with camera estimation mode.\n");
+		OutputDebugString("Run with camera estimation mode.\n");
 	else
 		print_debug("Run with naive mode.\n");
 

@@ -26,7 +26,7 @@ using namespace config;
 namespace pano {
 
 // use in development
-const static bool DEBUG_OUT = false;
+const static bool DEBUG_OUT = true;
 const static char* MATCHINFO_DUMP = "log/matchinfo.txt";
 
 Mat32f Stitcher::build() {
